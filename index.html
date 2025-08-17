@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasib: Edisi Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="creation-screen">
+        <h2>Buat Karaktermu</h2>
+        <div class="form-group">
+            <label for="name-input">Nama Karakter:</label>
+            <input type="text" id="name-input" placeholder="Ketik namamu..." maxlength="20">
+        </div>
+        <div class="form-group">
+            <label>Pilih Gender:</label>
+            <div id="gender-selection">
+                <button class="gender-btn" data-gender="Laki-laki">Laki-laki</button>
+                <button class="gender-btn" data-gender="Perempuan">Perempuan</button>
+            </div>
+        </div>
+        <button id="start-game-button">Mulai Kehidupan</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <header>
+            <h1>Nasib: Edisi Indonesia</h1>
+            <div id="player-info">
+                <span id="player-name">Nama: Anda</span> | <span id="age">Umur: 0</span>
+            </div>
+            <div id="financial-info">
+                <span id="money">Uang: Rp 0</span>
+                <span id="net-worth">Aset: Rp 0</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="stats-container">
+                <div class="stat-bar-container">
+                    <label>😊 Kebahagiaan</label>
+                    <div class="bar"><div id="happiness-bar" class="fill"></div></div>
+                </div>
+                <div class="stat-bar-container">
+                    <label>❤️ Kesehatan</label>
+                    <div class="bar"><div id="health-bar" class="fill"></div></div>
+                </div>
+                <div class="stat-bar-container">
+                    <label>🧠 Kecerdasan</label>
+                    <div class="bar"><div id="smarts-bar" class="fill"></div></div>
+                </div>
+                <div class="stat-bar-container">
+                    <label>😎 Penampilan</label>
+                    <div class="bar"><div id="looks-bar" class="fill"></div></div>
+                </div>
+            </div>
+
+            <div id="event-log">
+                <p id="event-text"></p>
+            </div>
+            
+            <div id="choices-container"></div>
+
+        </main>
+
+        <footer>
+            <button id="age-up-button">Tambah Umur +1 Tahun</button>
+            <button id="restart-button" class="hidden">Mulai Hidup Baru</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

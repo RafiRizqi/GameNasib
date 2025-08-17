@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Style untuk Layar Pembuatan Karakter & Game Container */
+#creation-screen, #game-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    padding: 24px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#creation-screen h2 {
+    margin-top: 0;
+    color: #1c1e21;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #606770;
+}
+
+#name-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#gender-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.gender-btn {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.gender-btn.selected {
+    background-color: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
+}
+
+#start-game-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #42b72a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#start-game-button:hover {
+    background-color: #36a420;
+}
+
+
+/* -- Style Game Utama -- */
+header {
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1c1e21;
+}
+
+#player-info {
+    font-size: 0.9rem;
+    color: #606770;
+    margin-top: 8px;
+}
+
+#financial-info {
+    font-size: 0.9rem;
+    color: #008a1e;
+    background-color: #e8f5e9;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 600;
+}
+
+.stat-bar-container {
+    margin-bottom: 12px;
+}
+
+#stats-container label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e4e6eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: #1877f2;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+#happiness-bar.fill { background-color: #f7b928; }
+#health-bar.fill { background-color: #42b72a; }
+#smarts-bar.fill { background-color: #1877f2; }
+#looks-bar.fill { background-color: #e02883; }
+
+#event-log {
+    background-color: #f7f7f7;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 80px;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#event-text {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+#choices-container {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choice-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.choice-button:hover {
+    background-color: #f0f2f5;
+    border-color: #ccc;
+}
+.choice-button:disabled {
+    background-color: #f8f8f8;
+    color: #aaa;
+    border-color: #eee;
+    cursor: not-allowed;
+}
+
+footer {
+    margin-top: 24px;
+}
+
+#age-up-button, #restart-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#age-up-button {
+    background-color: #2c9a41;
+}
+#restart-button {
+    background-color: #1877f2;
+}
+
+#age-up-button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
